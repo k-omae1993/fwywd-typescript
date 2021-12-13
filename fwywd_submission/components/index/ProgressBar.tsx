@@ -3,6 +3,7 @@ type Props = {
     params: number
 }
 
+
 const ProgressBar = ({per_params, params }: Props) => {
     return (
         <>
