@@ -9,6 +9,7 @@ module.exports = {
     extend: {
       backgroundImage: theme => ({
         'about-pattern': "url('/introduction/bg-about.png')",
+        'skills-pattern': "url('/introduction/bg-skills.png')",
        })
     },
   },

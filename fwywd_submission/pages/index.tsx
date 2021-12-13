@@ -3,11 +3,13 @@ import Image from 'next/image'
 import Layout from '../components/Layout'
 import Values_Card from '../components/index/Values_Card'
 import Main_Title from '../components/index/Main_Title'
+import ProgressBar from '../components/index/ProgressBar'
 
 import Hero from '../public/introduction/hero.png'
 import About1 from '../public/introduction/about-1.png'
 import About2 from '../public/introduction/about-2.png'
 import About3 from '../public/introduction/about-3.png'
+import Skill from '../public/introduction/skill.png'
 
 const Home: NextPage = () => {
   return (
@@ -66,6 +68,77 @@ const Home: NextPage = () => {
         </section>
       </section>
     </div>
+
+    {/*------skills------*/}
+    <section className="desktop:bg-skills-pattern desktop:mt-[-200px] desktop:h-[690px] mobile:bg-phone-skills-pattern mobile:bg-cover relative">
+      {/*------skills-mobile------*/}
+      <div className="desktop:hidden ">
+        <div className="text-center pt-[40px]">
+            <Main_Title
+            title={'スキル'}
+            sub_title={'SKILLS'}/>
+        </div>
+        <div className="p-[20px]">
+          <Image 
+          src={Skill}
+          />
+        </div>
+        <div className="pr-[20px] pl-[20px] pb-[30px]">
+          <p　className="tracking-widest text-sm opacity-70 leading-6 font-semibold opacity-50" >
+              テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+          </p> 
+        </div>
+        <div className="pl-8 pr-8 pb-16">
+          <div className="rounded bg-white p-8">
+          <ProgressBar
+            params={80}
+            />
+            <ProgressBar
+            params={60}
+            />
+            <ProgressBar
+            params={40}
+            />
+            <ProgressBar
+            params={20}
+            />
+          </div>
+        </div>
+      </div>
+      {/*------skills-desktop------*/}
+      <div className="mobile:hidden flex pt-[50px]">
+        <div className="w-1/2 text-right mt-[60px] mr-8">
+          <Image 
+          src={Skill}
+          />
+        </div>
+        <div className="w-1/2 text-left mr-[80px]">
+          <div className="flex">
+            <h2 className="font-bold tracking-[6px] opacity-70 text-[25px] mr-[10px]">スキル</h2>
+            <p className="text-[#008c8d] text-[15px] font-bold  inline-flex tracking-[1px] items-center">SKILLS</p>
+          </div>
+          <div className="mr-28 mt-4 w-9/12 mb-4">
+            <p　className="tracking-widest text-sm opacity-70 leading-6 font-semibold opacity-50" >
+                テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+            </p> 
+          </div>
+          <div className="w-9/12 rounded bg-white p-8">
+            <ProgressBar
+            params={80}
+            />
+            <ProgressBar
+            params={60}
+            />
+            <ProgressBar
+            params={40}
+            />
+            <ProgressBar
+            params={20}
+            />
+          </div>
+        </div>
+      </div> 
+    </section>
 
     </Layout>
   )
