@@ -1,8 +1,13 @@
 import type { NextPage } from 'next'
 import Image from 'next/image'
 import Layout from '../components/Layout'
+import Values_Card from '../components/index/Values_Card'
+import Main_Title from '../components/index/Main_Title'
 
 import Hero from '../public/introduction/hero.png'
+import About1 from '../public/introduction/about-1.png'
+import About2 from '../public/introduction/about-2.png'
+import About3 from '../public/introduction/about-3.png'
 
 const Home: NextPage = () => {
   return (
@@ -24,6 +29,44 @@ const Home: NextPage = () => {
           />
         </div>
       </main>
+
+      {/*------背景1------*/}
+    <div className="relative  bg-white">
+    {/*------values------*/}
+      <section>
+        <section className="desktop:h-[762px] desktop:bg-about-pattern desktop:bg-cover">
+          <div className="desktop:flex desktop:justify-center desktop:mb-12 desktop:items-center mobile:text-center mobile:mb-[20px]">
+            <Main_Title
+            title={'私について'}
+            sub_title={'ABOUT'}/>
+          </div>
+          <div className="desktop:flex desktop:justify-center mobile:text-center ">
+            <div className="desktop:w-[310px] desktop:text-center mobile:mb-[25px]">
+              <Values_Card
+              value_images={About1}
+              value_title={'趣味'}
+              text={'テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト'}
+              />
+            </div>
+            <div className="desktop:w-[310px] desktop:text-center desktop:mr-6 desktop:ml-6 mobile:mb-[25px]">
+              <Values_Card
+              value_images={About2}
+              value_title={'好きな食べ物'}
+              text={'テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト'}
+              />
+            </div>
+            <div className="desktop:w-[310px] desktop:text-center mobile:mb-[25px]">
+              <Values_Card
+              value_images={About3}
+              value_title={'性格'}
+              text={'テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト'}
+              />
+            </div>
+          </div>
+        </section>
+      </section>
+    </div>
+
     </Layout>
   )
 }
