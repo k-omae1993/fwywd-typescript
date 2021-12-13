@@ -14,6 +14,7 @@ import Skill from '../public/introduction/skill.png'
 import Value1 from '../public/introduction/value1.png'
 import Value2 from '../public/introduction/value2.png'
 import Value3 from '../public/introduction/value3.png'
+import Future from '../public/introduction/future.png'
 
 const Home: NextPage = () => {
   return (
@@ -184,6 +185,42 @@ const Home: NextPage = () => {
         </div>
       </section>
     </div>
+
+    {/*------future------*/}
+    <section className="desktop:bg-future-pattern desktop:h-[626px] mobile:bg-phone-future-pattern bg-cover">
+      {/*------future-mobile------*/}
+      <div className="desktop:hidden text-center mt-[-200px]">
+        <div className="pt-[250px] mb-4">
+          <Main_Title
+          title={'FUTURE'}
+          sub_title={'3年後にやりたいこと'}/>
+        </div>
+        <p className="pr-4 pl-4 leading-7 text-[14px] font-semibold opacity-60 tracking-[1px] text-left">
+          テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
+        </p>
+        <div className="mt-4 mb-[-10px]">
+          <Image 
+          src={Future}
+          />
+        </div>
+      </div>
+      {/*------future-desktop------*/}
+      <div className="mobile:hidden flex justify-center pt-[300px]">
+        <div className="w-1/2 text-left mt-[60px]">
+          <div className="flex items-center pl-[220px] mb-4">
+            <Main_Title
+            title={'FUTURE'}
+            sub_title={'3年後にやりたいこと'}/>
+            </div>
+            <p className="pl-[220px] leading-7 text-[14px] font-semibold opacity-60 tracking-[1px]">テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト</p>
+          </div>
+        <div className="w-1/2 text-left ml-12 mt-[40px]">
+          <Image 
+          src={Future}
+          />
+        </div>
+      </div>
+    </section>
 
     </Layout>
   )
