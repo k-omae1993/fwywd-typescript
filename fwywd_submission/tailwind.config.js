@@ -6,7 +6,11 @@ module.exports = {
       'mobile': {'max': '415px'},
       'desktop': {'min': '416px', },
     },
-    extend: {},
+    extend: {
+      backgroundImage: theme => ({
+        'about-pattern': "url('/introduction/bg-about.png')",
+       })
+    },
   },
   plugins: [],
 }
