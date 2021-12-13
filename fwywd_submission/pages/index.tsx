@@ -1,15 +1,19 @@
 import type { NextPage } from 'next'
 import Image from 'next/image'
 import Layout from '../components/Layout'
-import Values_Card from '../components/index/Values_Card'
+import About_Card from '../components/index/About_Card'
 import Main_Title from '../components/index/Main_Title'
 import ProgressBar from '../components/index/ProgressBar'
+import Values_Card from '../components/index/Values_Card'
 
 import Hero from '../public/introduction/hero.png'
 import About1 from '../public/introduction/about-1.png'
 import About2 from '../public/introduction/about-2.png'
 import About3 from '../public/introduction/about-3.png'
 import Skill from '../public/introduction/skill.png'
+import Value1 from '../public/introduction/value1.png'
+import Value2 from '../public/introduction/value2.png'
+import Value3 from '../public/introduction/value3.png'
 
 const Home: NextPage = () => {
   return (
@@ -44,23 +48,23 @@ const Home: NextPage = () => {
           </div>
           <div className="desktop:flex desktop:justify-center mobile:text-center ">
             <div className="desktop:w-[310px] desktop:text-center mobile:mb-[25px]">
-              <Values_Card
-              value_images={About1}
-              value_title={'趣味'}
+              <About_Card
+              about_images={About1}
+              about_title={'趣味'}
               text={'テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト'}
               />
             </div>
             <div className="desktop:w-[310px] desktop:text-center desktop:mr-6 desktop:ml-6 mobile:mb-[25px]">
-              <Values_Card
-              value_images={About2}
-              value_title={'好きな食べ物'}
+              <About_Card
+              about_images={About2}
+              about_title={'好きな食べ物'}
               text={'テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト'}
               />
             </div>
             <div className="desktop:w-[310px] desktop:text-center mobile:mb-[25px]">
-              <Values_Card
-              value_images={About3}
-              value_title={'性格'}
+              <About_Card
+              about_images={About3}
+              about_title={'性格'}
               text={'テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト'}
               />
             </div>
@@ -139,6 +143,47 @@ const Home: NextPage = () => {
         </div>
       </div> 
     </section>
+
+    {/*------背景2------*/}
+    <div className="desktop:h-[280px] relative bg-white">
+    {/*------values------*/}
+      <section>
+        <div className="desktop:flex desktop:justify-center desktop:items-center mobile:text-center">
+          <Main_Title
+            title={'価値観'}
+            sub_title={'VALUES'}/>
+        </div>
+        <div className="desktop:flex desktop:justify-center desktop:mt-12 mobile:mt-[30px]">
+          <div className="desktop:w-[330px] desktop:h-[450px] bg-white desktop:rounded-bl-md">
+            <Values_Card
+            value_image={Value1}
+            title={'価値観01'}
+            text={'テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト'}
+            />
+          </div>
+          <div className="desktop:h-[450px] desktop:w-[10px] desktop:bg-white">
+            <div className="desktop:bg-green-500 desktop:p-auto desktop:w-[2px] desktop:h-[400px] desktop:opacity-20"></div>
+          </div>
+          <div className="desktop:w-[330px] desktop:h-[450px] desktop:bg-white">
+            <Values_Card
+            value_image={Value2}
+            title={'価値観02'}
+            text={'テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト'}
+            />
+          </div>
+          <div className="desktop:h-[450px] desktop:w-[10px] desktop:bg-white">
+            <div className="desktop:bg-green-500 desktop:p-auto desktop:w-[2px] desktop:h-[400px] desktop:opacity-20"></div>
+          </div>
+          <div className="desktop:w-[330px] desktop:h-[450px] bg-white rounded-br-md">
+            <Values_Card
+            value_image={Value3}
+            title={'価値観03'}
+            text={'テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト'}
+            />
+          </div>
+        </div>
+      </section>
+    </div>
 
     </Layout>
   )
