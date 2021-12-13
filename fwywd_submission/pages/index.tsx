@@ -96,15 +96,19 @@ const Home: NextPage = () => {
         <div className="pl-8 pr-8 pb-16">
           <div className="rounded bg-white p-8">
           <ProgressBar
+            per_params={'80%'}
             params={80}
             />
             <ProgressBar
+            per_params={'60%'}
             params={60}
             />
             <ProgressBar
+            per_params={'40%'}
             params={40}
             />
             <ProgressBar
+            per_params={'20%'}
             params={20}
             />
           </div>
@@ -129,15 +133,19 @@ const Home: NextPage = () => {
           </div>
           <div className="w-9/12 rounded bg-white p-8">
             <ProgressBar
+            per_params={'80%'}
             params={80}
             />
             <ProgressBar
+            per_params={'60%'}
             params={60}
             />
             <ProgressBar
+            per_params={'40%'}
             params={40}
             />
             <ProgressBar
+            per_params={'20%'}
             params={20}
             />
           </div>
